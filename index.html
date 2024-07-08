@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>セッションバー曲リクエスト</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <img src="music_icon.png" alt="音楽アイコン" class="logo">
+            <h1>セッションバー曲リクエスト</h1>
+        </header>
+        <main>
+            <div class="request-form">
+                <input type="text" id="artistInput" placeholder="アーティスト名を入力">
+                <input type="text" id="songInput" placeholder="曲名を入力">
+                
+                <div class="parts-selection">
+                    <h3>演奏パート:</h3>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="playVo" name="playPart" value="Vo">
+                        <label for="playVo">Vo</label>
+                        <input type="checkbox" id="playGt" name="playPart" value="Gt">
+                        <label for="playGt">Gt</label>
+                        <input type="checkbox" id="playBa" name="playPart" value="Ba">
+                        <label for="playBa">Ba</label>
+                        <input type="checkbox" id="playDr" name="playPart" value="Dr">
+                        <label for="playDr">Dr</label>
+                        <input type="checkbox" id="playKey" name="playPart" value="Key">
+                        <label for="playKey">Key</label>
+                        <input type="checkbox" id="playOther" name="playPart" value="Other">
+                        <label for="playOther">Other</label>
+                    </div>
+                </div>
+                
+                <div class="parts-selection">
+                    <h3>募集パート:</h3>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="recruitVo" name="recruitPart" value="Vo">
+                        <label for="recruitVo">Vo</label>
+                        <input type="checkbox" id="recruitGt" name="recruitPart" value="Gt">
+                        <label for="recruitGt">Gt</label>
+                        <input type="checkbox" id="recruitBa" name="recruitPart" value="Ba">
+                        <label for="recruitBa">Ba</label>
+                        <input type="checkbox" id="recruitDr" name="recruitPart" value="Dr">
+                        <label for="recruitDr">Dr</label>
+                        <input type="checkbox" id="recruitKey" name="recruitPart" value="Key">
+                        <label for="recruitKey">Key</label>
+                        <input type="checkbox" id="recruitOther" name="recruitPart" value="Other">
+                        <label for="recruitOther">Other</label>
+                    </div>
+                </div>
+                
+                <button onclick="requestSong()">リクエスト</button>
+            </div>
+            
+            <div class="request-list">
+                <h2>リクエスト一覧</h2>
+                <ul id="requestList"></ul>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
